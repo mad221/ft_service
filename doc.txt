@@ -1,0 +1,23 @@
+lancer et set minikube
+	d'abord changer la path export MINIKUBE_HOME vers sgoinfre 
+	minikube start --cpus=4 --disk-size 2000 --vm-driver virtualbox
+
+lancer un service
+	pour cela creer un service sur la base d'une image exemple : kubectl create deployment hello-node --image=gcr.io/hello-minikube-zero-install/hello-node
+	ensuite ouvrir lancer le service en ouvrant son port exmple : kubectl expose deployment hello-node --type=LoadBalancer --port=8080
+	pour verifier si service actif on regarde avec kubectl get pod si sur 1 alors on se connecte au service kubectl service nom_service
+
+
+lancer nginx 
+	
+	creation sur la base de l'image puis kubectl create deployment nginx --image=nginxk
+	balance le serrice sur le port kubectl create service nodeport nginx --tcp=80:80 
+	pour avoir acces au service minikube service nginx
+
+
+lancer dashboad
+	installer l'apply dashboard : kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta8/aio/deploy/recommended.yaml
+	utiliser une token : kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}')
+	lancer le proxy : kubectl proxy 
+
+
