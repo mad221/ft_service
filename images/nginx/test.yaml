@@ -34,7 +34,8 @@ spec:
     spec:
       containers:
       - name: nginxcontainer
-        image: test:latest
+        image: nginx:latest
         imagePullPolicy: Never
         ports:
         - containerPort: 80
+        - containerPort: 443
