@@ -2,9 +2,10 @@
 
 minikube delete
 
-export MINIKUBE_HOME="/sgoinfre/goinfre/Perso/mpouzol" && minikube config set vm-driver virtualbox
+export MINIKUBE_HOME="/sgoinfre/goinfre/Perso/mpouzol"
+minikube config set vm-driver virtualbox
 
-minikube start --cpus=4 --vm-driver=virtualbox
+minikube start --cpus=4 --vm-driver=virtualbox --extra-config=apiserver.service-node-port-range=1-30000
 
 minikube ip > images/ftp/ip_file
 
@@ -17,3 +18,13 @@ minikube ip > images/ftp/ip_file
 kubectl apply -f images/influxdb/influxdb-secrets.yaml
 kubectl apply -f images/influxdb/influxdb-config.yaml
 kubectl apply -f images/influxdb/influxdb-deployment.yaml
+kubectl apply -f images/influxdb/influxdb-service.yaml
+kubectl apply -f images/telegraph/telegraf-config.yaml
+kubectl apply -f images/telegraph/telegraf-secrets.yaml
+kubectl apply -f images/telegraph/telegraf-deployment.yaml
+
+
+
+
+
+minikube dashboard

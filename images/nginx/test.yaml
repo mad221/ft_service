@@ -9,6 +9,9 @@ metadata:
 spec:
   type: NodePort
   ports:
+  - port: 26
+    name: ssh26
+    TargetPor: 26 
   - port: 80
     name: nginx80
     targetPort: 80
@@ -37,5 +40,6 @@ spec:
         image: nginx:latest
         imagePullPolicy: Never
         ports:
+        - containerPort: 26
         - containerPort: 80
         - containerPort: 443
