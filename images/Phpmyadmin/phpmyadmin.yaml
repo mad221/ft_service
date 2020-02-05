@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
       - name: phpcontainer
-        image: php:latest
+        image: phpmyadmin:latest
         imagePullPolicy: Never
         ports:
         - containerPort: 5000
