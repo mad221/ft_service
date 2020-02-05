@@ -28,7 +28,7 @@ kubectl apply -f images/nginx/test.yaml
 kubectl apply -f images/ftp/ftp.yaml
 kubectl apply -f images/wordpress/wordpress.yaml
 kubectl apply -f images/sql/sql.yaml
-kubectl apply -f images/Phpmyadmin/phpmyadmin.yam
+kubectl apply -f images/Phpmyadmin/phpmyadmin.yaml
 #kubectl apply -f images/influxdb/influxdb-secrets.yaml
 #kubectl apply -f images/influxdb/influxdb-config.yaml
 #kubectl apply -f images/influxdb/influxdb-deployment.yaml
