@@ -11,6 +11,7 @@ spec:
   ports:
   - port: 3306
     name: sqlx3306
+    nodePort: 3306
     targetPort: 3306
   selector:
     app: sql-s

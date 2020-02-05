@@ -10,8 +10,11 @@ spec:
   type: NodePort
   ports:
   - port: 5000
+    protocol: TCP
     name: phpx5000
-    targetPort:5000
+    nodePort: 5000
+    targetPort: 5000
+  type: LoadBalancer
   selector:
     app: phpmyadmin
 ---

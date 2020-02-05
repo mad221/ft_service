@@ -11,12 +11,15 @@ spec:
   ports:
   - port: 26
     name: ssh26
-    TargetPor: 26 
+    nodePort: 26
+    targetPort: 26 
   - port: 80
     name: nginx80
+    nodePort: 80
     targetPort: 80
   - port: 443
     name: nginx443
+    nodePort: 443
     targetPort: 443
   selector:
     app: nginx

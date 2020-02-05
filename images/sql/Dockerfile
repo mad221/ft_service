@@ -1,5 +1,6 @@
 FROM alpine:latest
 
+COPY ip_file ./
 COPY default.conf ./
 COPY setup.sh ./
 COPY mariadb-server.cnf ./
@@ -15,4 +16,4 @@ RUN apk update &\
 	rm -rf /var/cache/apk/*
 
 EXPOSE 3306
-CMD "./setup.sh"
+ENTRYPOINT "./setup.sh"

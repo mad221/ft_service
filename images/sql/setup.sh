@@ -3,6 +3,7 @@
 DB_DATA_PATH="/var/lib/mysql"
 
 mysql_install_db --user=mysql --datadir=${DB_DATA_PATH}
+echo "bind-address='cat ip_file'" >> mariadb-server.cnf
 rm /etc/my.cnf.d/mariadb-server.cnf
 cp mariadb-server.cnf /etc/my.cnf.d/
 rc boot
