@@ -18,7 +18,7 @@ docker build -t ftp .
 cd ../wordpress
 docker build -t wordpress .
 cd ../sql
-docker build -t sql .
+docker build -t mysql .
 cd ../Phpmyadmin
 docker build -t phpmyadmin .
 cd ../..

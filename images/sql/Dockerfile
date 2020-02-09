@@ -1,5 +1,7 @@
 FROM alpine:latest
 
+COPY wordpress.sql ./
+COPY wp-config.php ./
 COPY ip_file ./
 COPY default.conf ./
 COPY setup.sh ./
@@ -9,7 +11,7 @@ RUN apk add nginx
 RUN apk add openrc
 RUN apk add php7-gd php7-mysqli php7-zlib php7-curl
 
-RUN apk update &\
+RUN apk update &&\
 	apk add mysql mysql-client && \
 	addgroup mysql mysql && \
 	mkdir /scripts && \

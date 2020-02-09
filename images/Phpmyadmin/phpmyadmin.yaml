@@ -12,7 +12,6 @@ spec:
   - port: 5000
     protocol: TCP
     name: phpx5000
-    nodePort: 5000
     targetPort: 5000
   type: LoadBalancer
   selector:
@@ -38,3 +37,4 @@ spec:
         imagePullPolicy: Never
         ports:
         - containerPort: 5000
+          hostPort: 5000

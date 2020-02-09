@@ -3,15 +3,13 @@ kind: Service
 metadata:
   annotations:
     service.alpha.kubernetes.io/tolerate-unready-endpoints: "true"
-  name: wordpress-s
+  name: wordpress
   labels:
-    app: wordpress-s
+    app: wordpress
 spec:
-  type: NodePort
   ports:
   - port: 5050
     name: wordpressx5050
-    targetPort: 5050
   selector:
     app: wordpress
 ---
@@ -35,3 +33,4 @@ spec:
         imagePullPolicy: Never
         ports:
         - containerPort: 5050
+          hostPort: 5050

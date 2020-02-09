@@ -18,10 +18,10 @@ mkdir -p /run/nginx
 mkdir -p /usr/share/webapps/
 
 cd /usr/share/webapps
-wget http://files.directadmin.com/services/all/phpMyAdmin/phpMyAdmin-4.5.0.2-all-languages.tar.gz
-tar zxvf phpMyAdmin-4.5.0.2-all-languages.tar.gz
-rm phpMyAdmin-4.5.0.2-all-languages.tar.gz
-mv phpMyAdmin-4.5.0.2-all-languages phpmyadmin
+wget https://files.phpmyadmin.net/phpMyAdmin/4.9.4/phpMyAdmin-4.9.4-all-languages.tar.gz
+tar zxvf phpMyAdmin-4.9.4-all-languages.tar.gz
+rm phpMyAdmin-4.9.4-all-languages.tar.gz
+mv phpMyAdmin-4.9.4-all-languages phpmyadmin
 chmod -R 777 /usr/share/webapps/
 ln -s /usr/share/webapps/phpmyadmin/ /var/www/localhost/htdocs/phpmyadmin
 cp /config.inc.php /var/www/localhost/htdocs/phpmyadmin

@@ -2,7 +2,7 @@ FROM alpine
 
 COPY default.conf ./
 COPY setup.sh ./
-
+COPY wp-config.php ./
 RUN apk update && apk upgrade
 RUN apk add nginx
 RUN apk add openrc
