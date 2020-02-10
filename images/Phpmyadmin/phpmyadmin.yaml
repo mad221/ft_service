@@ -3,11 +3,10 @@ kind: Service
 metadata:
   annotations:
     service.alpha.kubernetes.io/tolerate-unready-endpoints: "true"
-  name: phpmyadmin-s
+  name: phpmyadmin
   labels:
-    app: phpmyadmin-s
+    app: phpmyadmin
 spec:
-  type: NodePort
   ports:
   - port: 5000
     protocol: TCP

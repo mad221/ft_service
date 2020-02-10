@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: grafana
@@ -18,7 +18,7 @@ spec:
           value: grafana-piechart-panel, blackmirror1-singlestat-math-panel
         - name: GF_SECURITY_ADMIN_PASSWORD
           value: kraken
-        image: grafana/grafana:5.4.3
+        image: grafana/grafana
         name: grafana
         volumeMounts:
         - mountPath: /etc/grafana/provisioning
