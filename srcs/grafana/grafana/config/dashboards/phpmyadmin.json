@@ -15,7 +15,6 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 7,
   "links": [],
   "panels": [
     {
@@ -97,7 +96,7 @@
             {
               "key": "container_name",
               "operator": "=",
-              "value": "phpcontainer"
+              "value": "phpmyadmin"
             }
           ]
         }

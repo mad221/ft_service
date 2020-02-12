@@ -15,7 +15,6 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 10,
   "links": [],
   "panels": [
     {
@@ -103,7 +102,7 @@
             {
               "key": "container_name",
               "operator": "=",
-              "value": "wordpresscontainer"
+              "value": "wordpress"
             }
           ]
         }
