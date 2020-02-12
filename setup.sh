@@ -30,7 +30,7 @@ cd srcs/telegraph && ./setup.sh
 cd ../..
 
 kubectl apply -f srcs/ingress-controller/ingress-controller.yaml
-kubectl apply -f srcs/nginx/test.yaml
+kubectl apply -f srcs/nginx/nginx.yaml
 kubectl apply -f srcs/ftp/ftp.yaml
 kubectl apply -f srcs/wordpress/wordpress.yaml
 kubectl apply -f srcs/sql/sql.yaml

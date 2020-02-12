@@ -41,7 +41,7 @@ spec:
         app: mysql
     spec:
       containers:
-      - name: sqlcontainer
+      - name: mysql
         image: mysql:latest
         imagePullPolicy: Never
         ports:

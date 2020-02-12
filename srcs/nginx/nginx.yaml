@@ -3,9 +3,9 @@ kind: Service
 metadata:
   annotations:
     service.alpha.kubernetes.io/tolerate-unready-endpoints: "true"
-  name: nginx-s
+  name: nginx
   labels:
-    app: nginx-s
+    app: nginx
 spec:
   type: NodePort
   ports:
@@ -39,7 +39,7 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginxcontainer
+      - name: nginx
         image: nginx:latest
         imagePullPolicy: Never
         ports:
