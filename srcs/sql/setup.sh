@@ -23,6 +23,4 @@ echo "exit;" | mysql
 
 mysql wordpress < wordpress.sql
 
-
-
 sleep infinity
